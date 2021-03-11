@@ -48,12 +48,10 @@ header {
     width: 22%;
     display: flex;
     border: solid 0.3em darkblue;
-    justify-content: space-around;
-    padding-right: 110px;
 }
 
 .search-input{
-    width: 75%;
+    width: 65%;
     height: 25px;
     align-self: center;
 }
@@ -173,6 +171,11 @@ li {
 .fab {
     padding-top: 12px;
     font-size: large;
+}
+
+i.fas.fa-shopping-basket{
+    align-items: center;
+    padding-left: 50px;
 }
 
 /*    page 2 - liste-produit */
