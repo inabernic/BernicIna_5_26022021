@@ -11,9 +11,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="64x64" href="images/icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <!--  <link rel="icon" sizes="16x16 32x32 64x64"
-        href="https://www.lydianeautourdumonde.com/app/themes/baserock/assets/ico/favicon.ico"> -->
     <meta name="msapplication-TileColor" content="#3bafda">
     <meta name="description"
         content="Lydiane autour du monde c’est des informations pratiques de voyage, des photos, une boutique en ligne, une émission de télévision, des livres et bien plus!">
@@ -32,44 +29,40 @@
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
+
+    <script type="module">
+        import {displayProduits} from './js/displayProduits.js';
+        window.onload = displayProduits;
+    </script>
+    <!-- <script type="module">
+        import { Toast } from 'bootstrap.esm.min.js' ;
+        Array.from(document.querySelectorAll('.toast')).forEach(toastNode => new Toast(toastNode))
+      </script> -->
 </head>
 
 
 <body>
     <div class="wrapper">
-
-        <header>
-            <div class="logo">
-                <a href="images/Capture.png">
-                    <img src="images/Capture.png" alt="logo Orinoco">
-                </a>
-            </div>
-            <nav class="navbar" role="group" aria-label="Button group with nested dropdown">
-                <button id="btnGroupDrop1" type="button" class="btn btn-group"> <a href="liste_produit.html">Liste des
-                        produits</button></a>
-                <button id="btnGroupDrop1" type="button" class="btn btn-group"><a href="liste_produit.html">Meilleure
-                        vente</button></a>
-                <button id="btnGroupDrop1" type="button" class="btn btn-group"><a
-                        href="liste_produit.html">Accessoires</button></a>
-            </nav>
+        <nav class="navbar navbar-expand bg-dark">
+            <a class="navbar-brand" href="index.html"><img src="images/Capture.png" alt="logo Orinoco"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+            </ul>
             <div class="find">
-                <input class="search-input" type="text" placeholder="Recherche">
-                <i class="fas fa-search"></i>
                 <a href="panier.html"> <i class="fas fa-shopping-basket"></i></a>
             </div>
-        </header>
+        </nav>
 
-        <main class="content">
-            <img src="images/appareil2.png" alt="Photo_aparat"><a href="images/appareil2.png"></a>
-            <div class="hero_inner">
-                <div class="page-width text-center">
-                    <h1>Cameras</h1>
-                    <h2>testé et approuvé</h2>
-                    <a href="liste_produit.html"><input class="shop" type="button" value="Acheter"></a>
-                </div>
-            </div>
+
+        <div class="jumbotron">
+            <h1>Bienvenue sur ORINOCO shop !</h1>
+        </div>
+
+        <main class="content ">
+            <div id="app"></div>
         </main>
-
 
         <footer>
             <div class="info">

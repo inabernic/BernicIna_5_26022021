@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="64x64" href="images/icon.png">
-    <link rel="manifest" href="site.webmanifest">
     <!--  <link rel="icon" sizes="16x16 32x32 64x64"
         href="https://www.lydianeautourdumonde.com/app/themes/baserock/assets/ico/favicon.ico"> -->
     <meta name="msapplication-TileColor" content="#3bafda">
@@ -40,12 +39,12 @@
 
         <header>
             <div class="logo">
-                <a href="images/Capture.png">
+                <a href="index.html">
                     <img src="images/Capture.png" alt="logo Orinoco">
                 </a>
             </div>
             <div class="back">
-                <a href="liste_produit.html"><i class="fas fa-arrow-left"></i></a>
+                <a href="produit.html"><i class="fas fa-arrow-left"></i></a>
             </div>
 
             <div class="find">
@@ -54,16 +53,171 @@
         </header>
 
         <main class="content">
-            <table class="table">
-                <thead>
-                    <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
-                </thead>
-                <tbody id="cart-tablebody"></tbody>
-            </table>
-            
-            <p>Sous total : <span class="subtotal"></span>€</p>
-            
-            <button id="confirm-command">Passer la commande</button>
+
+
+
+
+
+
+          <table class="table">
+            <thead>
+                <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
+            </thead>
+            <tbody id="cart-tablebody"></tbody>
+        </table>
+        
+        <p>Sous total : <span class="subtotal"></span>€</p>
+        
+        <button id="confirm-command">Passer la commande</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            <div class="panier">
+                <p>Voici votre panier: </p>
+            </div>
+
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="formulaire">
+                <h3>Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande</h3>
+            </div>
+            <!-- <form>
+                <div class="row g-2">
+                    <div class="col-sm">
+                        <input type="text" class="form-control" placeholder="Nom" aria-label="Nom">
+                      </div>
+                      <div class="col-sm">
+                        <input type="text" class="form-control" placeholder="Prenom" aria-label="Prenom">
+                      </div>
+                    </div>
+                    <div class="row g-1">
+                        <div class="col-sm">
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                          </div>
+                        </div>
+                <div class="row g-4">
+                    <div class="col-sm">
+                        <input type="text" class="form-control" placeholder="Nr" aria-label="Nr">
+                      </div>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" placeholder="Rue/Boulevard" aria-label="Rue/Boulevard">
+                    </div>
+                    <div class="col-sm">
+                      <input type="text" class="form-control" placeholder="Ville" aria-label="Ville">
+                    </div>
+                    <div class="col-sm">
+                      <input type="text" class="form-control" placeholder="Code postal" aria-label="Code postal">
+                    </div>
+                  </div>
+               
+                  <div class="row g-1">
+                    <div class="col-sm">
+                        <input type="text" class="form-control" placeholder="Pays" aria-label="Pays">
+                      </div>
+                    </div>
+                <a href="recap_comande.html"><button type="submit" class="btn btn-primary">Submit</button></a>
+            </form>
+ -->
+
+            <form class="row g-3">
+                <div class="col-md-4">
+                  <label for="validationCustom01" class="form-label">Nom</label>
+                  <input type="text" class="form-control" id="validationCustom01" required>
+                  </div>
+                <div class="col-md-4">
+                  <label for="validationCustom02" class="form-label">Prenom</label>
+                  <input type="text" class="form-control" id="validationCustom02"  required>
+                  </div>
+                <div class="col-md-4">
+                  <label for="validationCustomUsername3" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" value="email@example.com" id="validationCustomUsername03" aria-describedby="inputGroupPrepend" required>
+                  </div>
+                </div>
+                <div class="col-md-1">
+                    <label for="validationCustom04" class="form-label">Nr</label>
+                    <input type="text" class="form-control" id="validationCustom04" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom05" class="form-label">Rue</label>
+                  <input type="text" class="form-control" id="validationCustom05" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom06" class="form-label">Ville</label>
+                  <input type="text"class="form-control" id="validationCustom06" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom07" class="form-label">Code Postal</label>
+                  <input type="text" class="form-control" id="validationCustom07" required>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                    Accepter les termes et conditions
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Soumettre le formulaire</button>
+                </div>
+
+                
+              </form>
         </main>
 
 
