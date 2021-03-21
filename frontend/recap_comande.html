@@ -8,6 +8,7 @@
     <title>ORINOCO | Produits</title>
     <meta name="title" content="ORINOCO | Caméras Vintages">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimal-ui">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="64x64" href="images/icon.png">
     <!--  <link rel="icon" sizes="16x16 32x32 64x64"
@@ -15,6 +16,7 @@
     <meta name="msapplication-TileColor" content="#3bafda">
     <meta name="description"
         content="Lydiane autour du monde c’est des informations pratiques de voyage, des photos, une boutique en ligne, une émission de télévision, des livres et bien plus!">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -42,16 +44,67 @@
                 </a>
             </div>
             <div class="back">
-                <a href="index.html"><i class="fas fa-arrow-left"></i>Accueil</a>
+                <a href="produit.html"><i class="fas fa-arrow-left"></i></a>
             </div>
+
             <div class="find">
-                <i class="fas fa-shopping-basket"></i>
+                <a href="panier.html"> <i class="fas fa-shopping-basket"></i></a>
             </div>
         </header>
 
         <main class="content">
-            <button id="confirm-command">Passer la commande</button>
+            <div class="formulaire">
+                <h3>Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande</h3>
+            </div>
+
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="validationCustom01" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label">Prenom</label>
+                    <input type="text" class="form-control" id="validationCustom02" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustomUsername3" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" value="email@example.com"
+                            id="validationCustomUsername03" aria-describedby="inputGroupPrepend" required>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <label for="validationCustom04" class="form-label">Nr</label>
+                    <input type="text" class="form-control" id="validationCustom04" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom05" class="form-label">Rue</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationCustom06" class="form-label">Ville</label>
+                    <input type="text" class="form-control" id="validationCustom06" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationCustom07" class="form-label">Code Postal</label>
+                    <input type="text" class="form-control" id="validationCustom07" required>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Accepter les termes et conditions
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Soumettre le formulaire</button>
+                </div>
+            </form>
         </main>
+
+
 
         <footer>
             <div class="info">

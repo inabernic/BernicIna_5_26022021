@@ -2,241 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORINOCO | Produits</title>
-    <meta name="title" content="ORINOCO | Caméras Vintages">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimal-ui">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORINOCO | Produits</title>
+  <meta name="title" content="ORINOCO | Caméras Vintages">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 minimal-ui">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="64x64" href="images/icon.png">
-    <!--  <link rel="icon" sizes="16x16 32x32 64x64"
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/icon.png">
+  <!--  <link rel="icon" sizes="16x16 32x32 64x64"
         href="https://www.lydianeautourdumonde.com/app/themes/baserock/assets/ico/favicon.ico"> -->
-    <meta name="msapplication-TileColor" content="#3bafda">
-    <meta name="description"
-        content="Lydiane autour du monde c’est des informations pratiques de voyage, des photos, une boutique en ligne, une émission de télévision, des livres et bien plus!">
+  <meta name="msapplication-TileColor" content="#3bafda">
+  <meta name="description"
+    content="Lydiane autour du monde c’est des informations pratiques de voyage, des photos, une boutique en ligne, une émission de télévision, des livres et bien plus!">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
+  </script>
+  <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
+
+  <script type="module">
+    import {listCart} from './js/panier.js';
+    window.onload = listCart;
+</script>
+
 </head>
 
 
 <body>
-    <div class="wrapper">
+  <div class="wrapper">
 
-        <header>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/Capture.png" alt="logo Orinoco">
-                </a>
-            </div>
-            <div class="back">
-                <a href="produit.html"><i class="fas fa-arrow-left"></i></a>
-            </div>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/Capture.png" alt="logo Orinoco">
+        </a>
+      </div>
+      <div class="back">
+        <a href="produit.html"><i class="fas fa-arrow-left"></i></a>
+      </div>
 
-            <div class="find">
-                <a href="panier.html"> <i class="fas fa-shopping-basket"></i></a>
-            </div>
-        </header>
+      <div class="find">
+        <a href="panier.html"> <i class="fas fa-shopping-basket"></i></a>
+      </div>
+    </header>
 
-        <main class="content">
+    <main class="content">
+      <div class="panier">
+        <p>Voici votre panier: </p>
+      </div>
 
-
-
-
-
-
-          <table class="table">
-            <thead>
-                <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
-            </thead>
-            <tbody id="cart-tablebody"></tbody>
+      <div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Produit</th>
+              <th scope="col">Quantité</th>
+              <th scope="col">Prix</th>
+            </tr>
+          </thead>
+          <tbody id="listProducts">
+          </tbody>
         </table>
-        
-        <p>Sous total : <span class="subtotal"></span>€</p>
-        
-        <button id="confirm-command">Passer la commande</button>
+      </div>
+
+      <p>Sous total : <span class="subtotal"></span>€</p>
+      <button id="confirm-command">Passer la commande</button>
+
+    </main>
 
 
 
+    <footer>
+      <div class="info">
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> 21 Rue de Paris, Paris, France</li>
+          <li><i class="fas fa-phone-alt"></i> +1 555 555 555</li>
+          <li><i class="fas fa-envelope"></i> <a href="support@company.com"> support@company.com</a></li>
+        </ul>
+        <div class="reseaux">
+          <i class="fab fa-facebook-square"></i> <i class="fab fa-twitter-square"></i> <i class="fab fa-linkedin"></i>
+          <i class="fab fa-github-square"></i>
+        </div>
+      </div>
+    </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            <div class="panier">
-                <p>Voici votre panier: </p>
-            </div>
-
-            <div>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-            <div class="formulaire">
-                <h3>Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande</h3>
-            </div>
-            <!-- <form>
-                <div class="row g-2">
-                    <div class="col-sm">
-                        <input type="text" class="form-control" placeholder="Nom" aria-label="Nom">
-                      </div>
-                      <div class="col-sm">
-                        <input type="text" class="form-control" placeholder="Prenom" aria-label="Prenom">
-                      </div>
-                    </div>
-                    <div class="row g-1">
-                        <div class="col-sm">
-                            <input type="text" class="form-control" placeholder="Email" aria-label="Email">
-                          </div>
-                        </div>
-                <div class="row g-4">
-                    <div class="col-sm">
-                        <input type="text" class="form-control" placeholder="Nr" aria-label="Nr">
-                      </div>
-                    <div class="col-sm-7">
-                      <input type="text" class="form-control" placeholder="Rue/Boulevard" aria-label="Rue/Boulevard">
-                    </div>
-                    <div class="col-sm">
-                      <input type="text" class="form-control" placeholder="Ville" aria-label="Ville">
-                    </div>
-                    <div class="col-sm">
-                      <input type="text" class="form-control" placeholder="Code postal" aria-label="Code postal">
-                    </div>
-                  </div>
-               
-                  <div class="row g-1">
-                    <div class="col-sm">
-                        <input type="text" class="form-control" placeholder="Pays" aria-label="Pays">
-                      </div>
-                    </div>
-                <a href="recap_comande.html"><button type="submit" class="btn btn-primary">Submit</button></a>
-            </form>
- -->
-
-            <form class="row g-3">
-                <div class="col-md-4">
-                  <label for="validationCustom01" class="form-label">Nom</label>
-                  <input type="text" class="form-control" id="validationCustom01" required>
-                  </div>
-                <div class="col-md-4">
-                  <label for="validationCustom02" class="form-label">Prenom</label>
-                  <input type="text" class="form-control" id="validationCustom02"  required>
-                  </div>
-                <div class="col-md-4">
-                  <label for="validationCustomUsername3" class="form-label">Email</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" value="email@example.com" id="validationCustomUsername03" aria-describedby="inputGroupPrepend" required>
-                  </div>
-                </div>
-                <div class="col-md-1">
-                    <label for="validationCustom04" class="form-label">Nr</label>
-                    <input type="text" class="form-control" id="validationCustom04" required>
-                </div>
-                <div class="col-md-4">
-                  <label for="validationCustom05" class="form-label">Rue</label>
-                  <input type="text" class="form-control" id="validationCustom05" required>
-                </div>
-                <div class="col-md-3">
-                  <label for="validationCustom06" class="form-label">Ville</label>
-                  <input type="text"class="form-control" id="validationCustom06" required>
-                </div>
-                <div class="col-md-3">
-                  <label for="validationCustom07" class="form-label">Code Postal</label>
-                  <input type="text" class="form-control" id="validationCustom07" required>
-                </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                    Accepter les termes et conditions
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Soumettre le formulaire</button>
-                </div>
-
-                
-              </form>
-        </main>
-
-
-
-        <footer>
-            <div class="info">
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 21 Rue de Paris, Paris, France</li>
-                    <li><i class="fas fa-phone-alt"></i> +1 555 555 555</li>
-                    <li><i class="fas fa-envelope"></i> <a href="support@company.com"> support@company.com</a></li>
-                </ul>
-                <div class="reseaux">
-                    <i class="fab fa-facebook-square"></i> <i class="fab fa-twitter-square"></i> <i
-                        class="fab fa-linkedin"></i> <i class="fab fa-github-square"></i>
-                </div>
-            </div>
-        </footer>
-
-    </div>
+  </div>
 </body>
 
 </html>
