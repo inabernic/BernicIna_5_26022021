@@ -24,7 +24,6 @@
      let params = new URLSearchParams(document.location.search.substring(1));
      return params.get(sParam);
  }
- let listProducts = [];
 
  const buttonElement = document.querySelector('.add-to-cart')
  buttonElement.addEventListener('click', () => {
@@ -39,11 +38,14 @@
  })
 
  function addProduct(product) {
-     listProducts.push(product);
+     let products = [];
+     if(localStorage.productsKey!=null){
+        products = JSON.parse(localStorage.productsKey);
+     }
+     products.push(product);
+     localStorage.setItem('productsKey', JSON.stringify(products));
      console.log(product);
-
      //local storage nu pot pastra obiect
      alert('Article' + product.name + 'bien ajouté au panier');
      //conversion  listProducts  des "objet=>string"
-     localStorage.listProducts = JSON.stringify(listProducts);
  };

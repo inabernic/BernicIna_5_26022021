@@ -1,11 +1,11 @@
 export const listCart = async () => {
-    let products= [];
-    const produitHtml = document.querySelector('#listProducts')
-    
+    let products = [];
+    const produitHtml = document.querySelector('#listProducts');
+
     try {
         //on parse la liste de produits "products" 
-        products = JSON.parse(localStorage.listProducts);
-        let i=0;
+        products = JSON.parse(localStorage.productsKey);
+        let i = 0;
         for (let produit of products) {
             produitHtml.insertAdjacentHTML('beforeend', `
                                                          <tr>
