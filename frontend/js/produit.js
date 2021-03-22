@@ -39,13 +39,19 @@
 
  function addProduct(product) {
      let products = [];
-     if(localStorage.productsKey!=null){
-        products = JSON.parse(localStorage.productsKey);
+     if (localStorage.productsKey != null) {
+         products = JSON.parse(localStorage.productsKey);
      }
-     products.push(product);
+     //si le produit avec le meme id existe dans le panier, alors on augmente la quantité
+     let filteredProducts = products.filter(elem => elem.id === product.id);
+     if (filteredProducts.length > 0) {
+         let q = document.querySelector('#qt').value;
+         let qfinal = parseInt(filteredProducts[0].quantite) + parseInt(q);
+         filteredProducts[0].quantite = qfinal;
+     } else {
+         //sinon on ajoute un nouveau produit dans le panier
+         products.push(product);
+     }
      localStorage.setItem('productsKey', JSON.stringify(products));
-     console.log(product);
-     //local storage nu pot pastra obiect
      alert('Article' + product.name + 'bien ajouté au panier');
-     //conversion  listProducts  des "objet=>string"
  };
