@@ -33,8 +33,14 @@
   <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
   <script type="module">
-    import {listCart} from './js/panier.js';
+    import {listCart, deleteProductBasket} from './js/panier.js';
     window.onload = listCart;
+    window.deleteProductBasket = deleteProductBasket;
+    //listCart();
+    //deleteProductBasket;
+</script>
+
+
 </script>
 
 </head>
@@ -51,7 +57,7 @@
       </div>
 
       <div class="find">
-        <a href="panier.html"> <i class="fas fa-shopping-basket"></i></a>
+        <a href="panier.html"> <i class="fas fa-shopping-basket"></i>Mon panier</a>
       </div>
     </header>
 
@@ -67,16 +73,71 @@
               <th scope="col">#</th>
               <th scope="col">Produit</th>
               <th scope="col">Quantité</th>
-              <th scope="col">Prix</th>
+              <th scope="col">Prix/unité</th>
+              <th scope="col">Prix/sous-total</th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="listProducts">
           </tbody>
+          <tfoot>
+            <tr>
+             <td id="totalLabel" colspan="4">Total : </td>
+             <td id="total" colspan="2"></td>
+            </tr>
+          </tfoot>
         </table>
       </div>
 
-      <p>Sous total : <span class="subtotal"></span>€</p>
-      <button id="confirm-command">Passer la commande</button>
+      <div class="formulaire">
+        <h3>Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande</h3>
+    </div>
+
+    <form class="row g-3" action="recap_comande.html">
+        <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="validationCustom01" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Prenom</label>
+            <input type="text" class="form-control" id="validationCustom02" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustomUsername3" class="form-label">Email</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" 
+                    id="validationCustomUsername03" aria-describedby="inputGroupPrepend" required>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <label for="validationCustom04" class="form-label">Nr</label>
+            <input type="text" class="form-control" id="validationCustom04" required>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom05" class="form-label">Rue</label>
+            <input type="text" class="form-control" id="validationCustom05" required>
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom06" class="form-label">Ville</label>
+            <input type="text" class="form-control" id="validationCustom06" required>
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom07" class="form-label">Code Postal</label>
+            <input type="text" class="form-control" id="validationCustom07" required>
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Accepter les termes et conditions
+                </label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Passer la commande</button>
+        </div>
+    </form>
 
     </main>
 

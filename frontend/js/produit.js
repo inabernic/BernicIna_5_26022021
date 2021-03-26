@@ -13,7 +13,7 @@
                                                                     <p id="descriptionProduit">${produit.description}</p>
                                                                     <div id="lensesProduit">${produit.lenses}</div>
                                                                     <h3 id="priceProduit">${produit.price}</h3>
-                                                                </div>
+                                                                </div>                                                          
                                                 `)
      } catch (error) {
          console.error(error.message)
@@ -34,10 +34,10 @@
          imageUrl: document.querySelector('#imgProduit').getAttribute('src'),
          quantite: document.querySelector('#qt').value,
      }
-     addProduct(myProduct);
+     addProductToBasket(myProduct);
  })
 
- function addProduct(product) {
+ function addProductToBasket(product) {
      let products = [];
      if (localStorage.productsKey != null) {
          products = JSON.parse(localStorage.productsKey);
@@ -53,5 +53,7 @@
          products.push(product);
      }
      localStorage.setItem('productsKey', JSON.stringify(products));
-     alert('Article' + product.name + 'bien ajouté au panier');
+     alert(`Article ${product.name} bien ajouté au panier`);
  };
+
+ 

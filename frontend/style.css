@@ -4,10 +4,6 @@ body {
     box-sizing: content-box;
 }
 
-.wrapper {
-    border: solid 0.3em gold;
-}
-
 .wrapper img{
     margin-left: 15px;
 }
@@ -16,7 +12,6 @@ header {
     display: flex;
     width: 100%;
     justify-items: center;
-    border: solid 0.3em rgb(0, 255, 64);
     justify-items: baseline;
     justify-content: space-between;
     background-color: rgb(243, 232, 243);
@@ -34,8 +29,6 @@ header {
     text-align: center;
     padding: 10px;
 }
-
-
 
 
 
@@ -97,4 +90,10 @@ i.fas.fa-shopping-basket{
  /* recap-command */
 #confirm-command{
 background-color: rgb(247, 95, 95);
+}
+
+
+/* panier */
+#totalLabel{
+    text-align:right;
 }
