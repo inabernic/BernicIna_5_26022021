@@ -4,6 +4,11 @@ body {
     box-sizing: content-box;
 }
 
+.content{
+width: 80%;
+justify-content: center;
+}
+
 .wrapper img{
     margin-left: 15px;
 }

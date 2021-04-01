@@ -3,6 +3,7 @@ listCart()
 async function listCart(){
     let products = [];
     const produitHtml = document.querySelector('#listProducts');
+    const templateElem = document.getElementById('template_list')
     let total = 0;
 
     try {
@@ -10,17 +11,17 @@ async function listCart(){
         products = JSON.parse(localStorage.productsKey);
         let i = 1;
         for (let produit of products) {
-            produitHtml.insertAdjacentHTML('beforeend', `
-                                                         <tr>
-                                                         <td scope="col">${i++}</td>
-                                                         <td scope="col">${produit.name}</td>
-                                                         <td scope="col">${produit.quantite}</td>
-                                                         <td scope="col">${produit.price}</td>
-                                                         <td scope="col">${produit.quantite * produit.price}</td>
-                                                         <td scope="col"><input type="submit" value="Supprimer l'article" onClick="deleteProductBasket('${produit.id}');"/></td>
-                                                       </tr>
-                                                `)
-            total += produit.quantite * produit.price;
+            const clone = document.importNode(templateElem.content, true)
+            clone.getElementById("nr").textContent = i++
+            clone.getElementById("imgProduit").src = produit.imageUrl
+            clone.getElementById("nameProduit").textContent = ` Model: ` + produit.name
+            clone.getElementById("qt").textContent = produit.quantite
+            clone.getElementById("priceProduit").textContent = produit.price
+            clone.getElementById("sous_total").textContent = ` Prix: ` + produit.price + ` Euros`
+
+            produitHtml.appendChild(clone)
+
+            total += produit.quantite * produit.price;              
         }
         //afficher le  total
         document.querySelector('#total').innerText = total +` Euros`;

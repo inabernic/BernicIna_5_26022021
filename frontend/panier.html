@@ -61,7 +61,8 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
               <th scope="col">Produit</th>
               <th scope="col">Quantité</th>
               <th scope="col">Prix/unité</th>
@@ -70,6 +71,16 @@
             </tr>
           </thead>
           <tbody id="listProducts">
+            <template id="template_list">
+              <tr>
+                  <td scope="col" id="nr"></td>
+                  <td><img scope="col" id="imgProduit" height="" width="150"></img></td>
+                  <td scope="col" id="nameProduit"></td>
+                  <td scope="col" id="qt"></td>
+                  <td scope="col" id="priceProduit"></td>
+                  <td scope="col"id="sous_total"></td>
+              </tr>
+          </template>
           </tbody>
           <tfoot>
             <tr>

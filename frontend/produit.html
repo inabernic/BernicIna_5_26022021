@@ -32,10 +32,8 @@
     </script>
     <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
-    <script type="module">
-        import {detailProduit} from './js/produit.js';
-        window.onload = detailProduit;
-    </script>
+<script src='./js/produit.js' defer></script>
+
 </head>
 
 
@@ -67,15 +65,17 @@
 
         <main class="content">
             <h1>Description du produit</p>
+                <div id="produit">
+                <template id="template_info">
+                        <p scope="col" id="idProduit" style="display:none"></p>
+                        <img scope="col" id="imgProduit" height="" width="150"></img>
+                        <h1 scope="col" id="nameProduit"></h1>
+                        <p scope="col" id="descriptionProduit"></p>
+                        <div scope="col"id="lensesProduit"></div>
+                        <h2 scope="col"id="priceProduit"></h2>
+                </template>
+            </div>
 
-                <div id="produit"></div>
-
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option selected>Sellection des lentilles</option>
-                    <option value="1">35mm 1.4</option>
-                    <option value="2">50mm 1.6</option>
-                    <option value="3">Three</option>
-                </select>
                 <div class="ajout_panier">
                     <label for="q">Quantité: </label>
                     <select id="qt" name="q">
