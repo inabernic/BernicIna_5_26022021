@@ -30,8 +30,6 @@ header {
     padding: 10px;
 }
 
-
-
 /**footer**/
 footer {
     display: flex;
@@ -86,6 +84,9 @@ i.fas.fa-shopping-basket{
     padding: 10px;
 }
 
+#nameProduit{
+    text-overflow: ellipsis;
+}
 
  /* recap-command */
 #confirm-command{

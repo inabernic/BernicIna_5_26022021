@@ -32,16 +32,7 @@
   </script>
   <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
-  <script type="module">
-    import {listCart, deleteProductBasket} from './js/panier.js';
-    window.onload = listCart;
-    window.deleteProductBasket = deleteProductBasket;
-    //listCart();
-    //deleteProductBasket;
-</script>
-
-
-</script>
+  <script src='./js/panier.js' defer></script>
 
 </head>
 
@@ -93,7 +84,7 @@
         <h3>Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande</h3>
     </div>
 
-    <form class="row g-3" action="recap_comande.html">
+    <form class="row g-3" action="recap_comande.html" novalidate>
         <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Nom</label>
             <input type="text" class="form-control" id="validationCustom01" required>

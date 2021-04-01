@@ -5,24 +5,21 @@ import {
 export const displayProduits = async () => {
     let produits = []
     const appHtml = document.querySelector('#app')
+    const templateElem = document.getElementById('template')
+
 
     try {
         produits = await getProduits()
 
         for (let produit of produits) {
-            appHtml.insertAdjacentHTML('beforeend', `
-                                                         <div class="col-sm-2 shadow-lg p-3 mb-5 bg-body ">
-                                                            <div class="card text-center" style="width: 18rem;">
-                                                                    <img src="${produit.imageUrl}" class="card-img-top rounded mx-auto d-block"></img>
-                                                                    <h2>${produit.name}</h2>
-                                                                    <p>${produit.description}</p>
-                                                                       <div class="card-body">
-                                                                         <input name="bouton_info" type="button" class="btn btn-primary" value="Plus d'info"
-                                                                    onclick="document.location.href='produit.html?id=${produit._id}'">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                `)
+            const clone = document.importNode(templateElem.content, true)
+            clone.getElementById("idProduit").textContent = produit._id
+            clone.getElementById("imgProduit").src = produit.imageUrl
+            clone.getElementById("nameProduit").textContent = ` Model: ` + produit.name
+            clone.getElementById("priceProduit").textContent = ` Prix: ` + produit.price + ` Euros`
+            clone.getElementById("bouton_info").onclick = function() {document.location.href=`produit.html?id=` + produit._id }
+
+            appHtml.appendChild(clone)                      
         }
     } catch (error) {
         console.error(error.message)

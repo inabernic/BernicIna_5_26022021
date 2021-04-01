@@ -1,4 +1,6 @@
-export const listCart = async () => {
+listCart()
+
+async function listCart(){
     let products = [];
     const produitHtml = document.querySelector('#listProducts');
     let total = 0;
@@ -29,7 +31,8 @@ export const listCart = async () => {
 }
 
 
-export function deleteProductBasket(idProduct) {
+
+function deleteProductBasket(idProduct) {
     //const deleteProductBasket = (idProduct) => {       //    import export
     let products = JSON.parse(localStorage.getItem('productsKey'));
     //let products = JSON.parse(localStorage.productsKey);     //acces direct 
@@ -39,5 +42,3 @@ export function deleteProductBasket(idProduct) {
     window.location.reload(); // il faut le mettre dans un event lisener                 ou utilise document!!!!!!!!!!!!!!!!!!!
 }
 
-
-//export {listCart,deleteProductBasket }

@@ -44,18 +44,18 @@
 
 <body>
     <div class="wrapper">
-  
-      <header>
-        <div class="logo">
-          <a href="index.html">
-            <img src="images/Capture.png" alt="logo Orinoco">
-          </a>
-        </div>
-  
-        <div class="find">
-          <a href="panier.html"> <i class="fas fa-shopping-basket"></i>Mon panier</a>
-        </div>
-      </header>
+
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Capture.png" alt="logo Orinoco">
+                </a>
+            </div>
+
+            <div class="find">
+                <a href="panier.html"> <i class="fas fa-shopping-basket"></i>Mon panier</a>
+            </div>
+        </header>
 
 
         <div class="jumbotron">
@@ -63,7 +63,19 @@
         </div>
 
         <main class="content ">
-            <div id="app"></div>
+            <div id="app">
+                <template id="template">
+                    <div class="col-sm-2 shadow-lg p-3 mb-5 bg-body ">
+                        <div id="idProduit" style="display:none;"></div>
+                        <img id="imgProduit" src="" class="card-img-top rounded mx-auto d-block"></img>
+                        <h2 id="nameProduit"></h2>
+                        <h3 id="priceProduit"></h3>
+                        <div class="card-body">
+                            <input id="bouton_info" type="button" class="btn btn-primary" value="Plus d'info">
+                        </div>
+                    </div>
+                </template>
+            </div>
         </main>
 
         <footer>
