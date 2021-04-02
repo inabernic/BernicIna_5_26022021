@@ -1,6 +1,6 @@
 listCart()
 
-async function listCart(){
+async function listCart() {
     let products = [];
     const produitHtml = document.querySelector('#listProducts');
     const templateElem = document.getElementById('template_list')
@@ -14,17 +14,18 @@ async function listCart(){
             const clone = document.importNode(templateElem.content, true)
             clone.getElementById("nr").textContent = i++
             clone.getElementById("imgProduit").src = produit.imageUrl
-            clone.getElementById("nameProduit").textContent = ` Model: ` + produit.name
+            clone.getElementById("nameProduit").textContent = produit.name
             clone.getElementById("qt").textContent = produit.quantite
             clone.getElementById("priceProduit").textContent = produit.price
-            clone.getElementById("sous_total").textContent = ` Prix: ` + produit.price + ` Euros`
-
+            clone.getElementById("sous_total").textContent =  produit.price * produit.quantite
+            clone.getElementById("button_delete").onclick = deleteProductBasket(produit._id) 
+             
             produitHtml.appendChild(clone)
 
-            total += produit.quantite * produit.price;              
+            total += produit.quantite * produit.price;
         }
         //afficher le  total
-        document.querySelector('#total').innerText = total +` Euros`;
+        document.querySelector('#total').innerText = total + ` Euros`;
 
     } catch (error) {
         console.error(error.message)
@@ -40,6 +41,5 @@ function deleteProductBasket(idProduct) {
     let filteredProducts = products.filter(elem => elem.id !== idProduct);
     localStorage.setItem('productsKey', JSON.stringify(filteredProducts));
     //localStorage.productsKey =  JSON.stringify(filteredProducts);    //acces direct
-    window.location.reload(); // il faut le mettre dans un event lisener                 ou utilise document!!!!!!!!!!!!!!!!!!!
+   // window.location.reload(); // il faut le mettre dans un event lisener                 ou utilise document!!!!!!!!!!!!!!!!!!!
 }
-

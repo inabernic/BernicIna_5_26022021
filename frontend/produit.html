@@ -32,7 +32,7 @@
     </script>
     <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
-<script src='./js/produit.js' defer></script>
+    <script src='./js/produit.js' defer></script>
 
 </head>
 
@@ -42,48 +42,54 @@
 
         <header>
             <div class="logo">
-              <a href="index.html">
-                <img src="images/Capture.png" alt="logo Orinoco">
-              </a>
+                <a href="index.html">
+                    <img src="images/Capture.png" alt="logo Orinoco">
+                </a>
             </div>
-      
+
             <div class="find">
-              <a href="panier.html"> <i class="fas fa-shopping-basket"></i>Mon panier</a>
+                <a href="panier.html"> <i class="fas fa-shopping-basket"></i>Mon panier</a>
             </div>
-          </header>
+        </header>
 
 
 
-            <div class="dropdown">
-                <ul id="cart-dropdown" hidden>
-                    <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
-                    <li class="go-to-cart hidden"><a href="panier.html">Voir le panier</a></li>
-                </ul>
-            </div> 
+        <div class="dropdown">
+            <ul id="cart-dropdown" hidden>
+                <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+                <li class="go-to-cart hidden"><a href="panier.html">Voir le panier</a></li>
+            </ul>
+        </div>
 
         </header>
 
         <main class="content">
-            <h1>Description du produit</p>
+            <h1>La description du produit : </p>
                 <div id="produit">
-                <template id="template_info">
+                    <template id="template_info">
                         <p scope="col" id="idProduit" style="display:none"></p>
-                        <img scope="col" id="imgProduit" height="" width="150"></img>
+                        <img  scope="col" id="imgProduit" height="" width="300"></img>
                         <h1 scope="col" id="nameProduit"></h1>
-                        <p scope="col" id="descriptionProduit"></p>
-                        <div scope="col"id="lensesProduit"></div>
-                        <h2 scope="col"id="priceProduit"></h2>
-                </template>
-            </div>
+                        <p scope="col" id="descriptionProduit" class="display-6"></p>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Choix des lentilles</option>
+                            <option value="1" id="lensesProduit1"></option>
+                            <option value="2" id="lensesProduit2"></option>
+                            <option value="3" id="lensesProduit3"></option>
+                          </select>
+                        <div scope="col" id="lensesProduit" class="h6"></div>
+                        <h2 scope="col" id="priceProduit"></h2>
+                    </template>
+                </div>
 
-                <div class="ajout_panier">
+                <div class="ajout_panier h4">
                     <label for="q">Quantité: </label>
-                    <select id="qt" name="q">
+                    <select id="qt" name="q" class="h4">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
-                    <button type="button" class="add-to-cart">Ajouter au panier</button>
+                    <button type="button" class="add-to-cart btn btn-primary h4">Ajouter au panier</button>
                 </div>
         </main>
 

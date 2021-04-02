@@ -6,18 +6,18 @@ async function detailProduit() {
     const templateElem = document.getElementById('template_info')
 
     try {
-        let produit = await fetch('http://localhost:3000/api/cameras/' + idProduit)
+        let produit = await fetch(`http://localhost:3000/api/cameras/${idProduit}`)
             .then(response => response.json())
-            const clone = document.importNode(templateElem.content, true)
-            clone.getElementById("idProduit").textContent = produit._id
-            clone.getElementById("imgProduit").src = produit.imageUrl
-            clone.getElementById("nameProduit").textContent = ` Model: ` + produit.name
-            clone.getElementById("descriptionProduit").textContent = produit.description
-            clone.getElementById("lensesProduit").textContent = produit.lenses
-            clone.getElementById("priceProduit").textContent = ` Prix: ` + produit.price + ` Euros`
+        const clone = document.importNode(templateElem.content, true)
+        clone.getElementById("idProduit").textContent = produit._id
+        clone.getElementById("imgProduit").src = produit.imageUrl
+        clone.getElementById("nameProduit").textContent = produit.name
+        clone.getElementById("descriptionProduit").textContent = produit.description
+        clone.getElementById("lensesProduit").textContent = produit.lenses
+        clone.getElementById("priceProduit").textContent =  produit.price/100
 
-            produitHtml.appendChild(clone)
-      
+        produitHtml.appendChild(clone)
+
     } catch (error) {
         console.error(error.message)
     }
@@ -56,5 +56,5 @@ function addProductToBasket(product) {
         products.push(product);
     }
     localStorage.setItem('productsKey', JSON.stringify(products));
-    alert(`Article ${product.name} bien ajouté au panier`);
+    alert (`Article ${product.name} bien ajouté au panier`);
 };

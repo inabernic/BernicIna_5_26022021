@@ -1,4 +1,6 @@
-import {displayProduits} from './displayProduits.js';
+import {
+    displayProduits
+} from './displayProduits.js';
 
 function listeProduits() {
     displayProduits();

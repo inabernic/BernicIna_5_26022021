@@ -30,7 +30,7 @@
     </script>
     <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
-    <script src='./js/recap_comande.js' defer></script>
+    <script src='./js/confirmation_comande.js' defer></script>
 
 </head>
 
@@ -58,7 +58,7 @@
                     <td><img scope="col" id="imgProduit" height="" width="150"></img></td>
                     <td scope="col" id="nameProduit"></td>
                     <td scope="col" id="qt"></td>
-                    <td scope="col"id="sous_total"></td>
+                    <td scope="col" id="sous_total"></td>
                 </tr>
             </template>
 
@@ -87,8 +87,8 @@
                     </tfoot>
                 </table>
             </div>
-            <div class="card-body">
-                <input id="bouton_validate" type="button" class="btn btn-primary" value="Acheter"
+            <div class="card-body d-grid gap-2 d-md-flex justify-content-md-end">
+                <input id="bouton_validate" type="button" class="btn btn-danger" value="Acheter"
                     onclick="validateComande()">
             </div>
         </main>
