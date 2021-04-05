@@ -17,7 +17,7 @@ async function listComande() {
             clone.getElementById("imgProduit").src = produit.imageUrl
             clone.getElementById("nameProduit").textContent = ` Model: ` + produit.name
             clone.getElementById("qt").textContent = produit.quantite
-            clone.getElementById("sous_total").textContent = ` Prix: ` + produit.price + ` Euros`
+            clone.getElementById("sous_total").textContent = ` Prix: ${produit.price} Euros`
 
             appHtml.appendChild(clone)
 

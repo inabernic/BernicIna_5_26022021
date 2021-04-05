@@ -68,17 +68,13 @@
                 <div id="produit">
                     <template id="template_info">
                         <p scope="col" id="idProduit" style="display:none"></p>
-                        <img  scope="col" id="imgProduit" height="" width="300"></img>
+                        <img scope="col" id="imgProduit" height="" width="300"></img>
                         <h1 scope="col" id="nameProduit"></h1>
                         <p scope="col" id="descriptionProduit" class="display-6"></p>
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option selected>Choix des lentilles</option>
-                            <option value="1" id="lensesProduit1"></option>
-                            <option value="2" id="lensesProduit2"></option>
-                            <option value="3" id="lensesProduit3"></option>
-                          </select>
-                        <div scope="col" id="lensesProduit" class="h6"></div>
-                        <h2 scope="col" id="priceProduit"></h2>
+                        <select id ="lenses" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option value="0" selected>Choix des lentilles</option>
+                        </select>
+                        <h2><span scope="col" id="priceProduit"></span>€</h2>
                     </template>
                 </div>
 

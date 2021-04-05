@@ -2,24 +2,28 @@ detailProduit()
 
 async function detailProduit() {
     let idProduit = getURLParameter('id');
-    const produitHtml = document.querySelector('#produit')
-    const templateElem = document.getElementById('template_info')
+    const produitHtml = document.querySelector('#produit');
+    const templateElem = document.getElementById('template_info');
 
     try {
         let produit = await fetch(`http://localhost:3000/api/cameras/${idProduit}`)
             .then(response => response.json())
-        const clone = document.importNode(templateElem.content, true)
-        clone.getElementById("idProduit").textContent = produit._id
-        clone.getElementById("imgProduit").src = produit.imageUrl
-        clone.getElementById("nameProduit").textContent = produit.name
-        clone.getElementById("descriptionProduit").textContent = produit.description
-        clone.getElementById("lensesProduit").textContent = produit.lenses
-        clone.getElementById("priceProduit").textContent =  produit.price/100
+        const clone = document.importNode(templateElem.content, true);
+        clone.getElementById("idProduit").textContent = produit._id;
+        clone.getElementById("imgProduit").src = produit.imageUrl;
+        clone.getElementById("nameProduit").textContent = produit.name;
+        clone.getElementById("descriptionProduit").textContent = produit.description;
+        clone.getElementById("priceProduit").textContent =  produit.price/100;
 
-        produitHtml.appendChild(clone)
+        let select =   clone.getElementById("lenses");
+         produit.lenses.forEach(function(lense){
+            select[select.options.length] = new Option(lense, select.options.length);
+        });
+
+        produitHtml.appendChild(clone);
 
     } catch (error) {
-        console.error(error.message)
+        console.error(error.message);
     }
 }
 
@@ -28,7 +32,7 @@ function getURLParameter(sParam) {
     return params.get(sParam);
 }
 
-const buttonElement = document.querySelector('.add-to-cart')
+const buttonElement = document.querySelector('.add-to-cart');
 buttonElement.addEventListener('click', () => {
     let myProduct = {
         id: document.querySelector('#idProduit').innerText,
@@ -58,3 +62,4 @@ function addProductToBasket(product) {
     localStorage.setItem('productsKey', JSON.stringify(products));
     alert (`Article ${product.name} bien ajouté au panier`);
 };
+
