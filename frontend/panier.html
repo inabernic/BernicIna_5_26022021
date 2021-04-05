@@ -33,6 +33,7 @@
   <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
   <script src='./js/panier.js' defer></script>
+  <script src='./js/confirmation_comande.js'></script>
 
 </head>
 
@@ -96,9 +97,9 @@
         <h3>Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande</h3>
       </div>
 
-      <form class="row g-3" action="confirmation_comande.html" novalidate>
+      <div class="row g-3" action="confirmation_comande.html" novalidate>
         <div class="col-md-4">
-          <label for="validationCustom01" class="form-label" aria-describedby="nomHelp">Nom</label>
+          <label  for="validationCustom01" class="form-label" aria-describedby="nomHelp">Nom</label>
           <div id="nomHelp" class="form-text">Nous ne partagerons jamais votre nom avec qui que ce soit.</div>
           <input type="text" class="form-control" id="validationCustom01" required>
         </div>
@@ -128,9 +129,9 @@
         </div>
   
         <div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-primary" type="submit">Passer la commande</button>
+          <button class="btn btn-primary" type="submit" onclick="registerOrder()">Passer la commande</button>
         </div>
-      </form>
+      </div>
 
     </main>
 
