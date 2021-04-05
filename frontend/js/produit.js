@@ -35,7 +35,7 @@ function getURLParameter(sParam) {
 const buttonElement = document.querySelector('.add-to-cart');
 buttonElement.addEventListener('click', () => {
     let myProduct = {
-        id: document.querySelector('#idProduit').innerText,
+        _id: document.querySelector('#idProduit').innerText,
         name: document.querySelector('#nameProduit').innerText,
         price: document.querySelector('#priceProduit').innerText,
         imageUrl: document.querySelector('#imgProduit').getAttribute('src'),
@@ -50,7 +50,7 @@ function addProductToBasket(product) {
         products = JSON.parse(localStorage.productsKey);
     }
     //si le produit avec le meme id existe dans le panier, alors on augmente la quantité
-    let filteredProducts = products.filter(elem => elem.id === product.id);
+    let filteredProducts = products.filter(elem => elem.id === product._id);
     if (filteredProducts.length > 0) {
         let q = document.querySelector('#qt').value;
         let qfinal = parseInt(filteredProducts[0].quantite) + parseInt(q);

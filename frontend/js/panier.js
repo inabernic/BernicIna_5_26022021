@@ -18,8 +18,9 @@ async function listCart() {
             clone.getElementById("qt").textContent = produit.quantite
             clone.getElementById("priceProduit").textContent = produit.price
             clone.getElementById("sous_total").textContent =  produit.price * produit.quantite
-            clone.getElementById("button_delete").onclick = deleteProductBasket(produit._id) 
-             
+            clone.getElementById("button_delete").onclick = function () {
+               deleteProductBasket(produit._id) 
+            }
             produitHtml.appendChild(clone)
 
             total += produit.quantite * produit.price;
@@ -33,13 +34,13 @@ async function listCart() {
 }
 
 
-
 function deleteProductBasket(idProduct) {
     //const deleteProductBasket = (idProduct) => {       //    import export
     let products = JSON.parse(localStorage.getItem('productsKey'));
     //let products = JSON.parse(localStorage.productsKey);     //acces direct 
-    let filteredProducts = products.filter(elem => elem.id !== idProduct);
+    let filteredProducts = products.filter(elem => elem._id !== idProduct);
+    console.log(filteredProducts)
     localStorage.setItem('productsKey', JSON.stringify(filteredProducts));
     //localStorage.productsKey =  JSON.stringify(filteredProducts);    //acces direct
-   // window.location.reload(); // il faut le mettre dans un event lisener                 ou utilise document!!!!!!!!!!!!!!!!!!!
+    document.location.reload();
 }
