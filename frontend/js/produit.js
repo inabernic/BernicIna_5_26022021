@@ -16,9 +16,9 @@ async function detailProduit() {
         clone.getElementById("priceProduit").textContent =  produit.price/100;
 
         let select =   clone.getElementById("lenses");
-         produit.lenses.forEach(function(lense){
+        for(let lense of produit.lenses){
             select[select.options.length] = new Option(lense, select.options.length);
-        });
+        }
 
         produitHtml.appendChild(clone);
 
