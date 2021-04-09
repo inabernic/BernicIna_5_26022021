@@ -55,11 +55,11 @@
 
     <main class="content">
       <div class="panier">
-        <p>Voici votre panier: </p>
+        <p class="h2 text-primary text-start">Voici votre panier : </p>
       </div>
 
       <div>
-        <table class="table-bordered table table-danger table-striped">
+        <table class="table-bordered table table-secondary table-striped">
           <thead>
             <tr>
               <th scope="col"></th>
@@ -85,54 +85,54 @@
             </template>
           </tbody>
           <tfoot>
-            <tr class="table-dark">
-              <td id="totalLabel" colspan="5">Total : </td>
-              <td id="total" colspan="2"></td>
+            <tr class="table-striped">
+              <td class="h5" id="totalLabel" colspan="5">Total : </td>
+              <td class="h5 text-danger" id="total" colspan="2"></td>
             </tr>
           </tfoot>
         </table>
       </div>
 
-      <div class="formulaire">
-        <h3>Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande</h3>
-      </div>
+      <div class="formulaire shadow-none p-3 mb-5 bg-light rounded">
+        <p class="h5 text-primary text-start">Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande :</p>
 
-      <div class="row g-3" action="confirmation_comande.html" novalidate>
+      <form class="row g-3" action="confirmation_comande.html" novalidate>
         <div class="col-md-4">
-          <label  for="validationCustom01" class="form-label" aria-describedby="nomHelp">Nom</label>
-          <div id="nomHelp" class="form-text">Nous ne partagerons jamais votre nom avec qui que ce soit.</div>
-          <input type="text" class="form-control" id="validationCustom01" required>
+          <label for="validationCustom01" class="h6 form-label" aria-describedby="nomHelp">Nom</label>
+          <div id="nomHelp" class="form-text">Les noms doivent être en minuscules et contenir 4 à 9 caractères.</div>
+          <input type="text" class="form-control" id="validationCustom01" required="required" pattern="[A-Za-z]{4}" title="4 à 10 lettres">
+          <span class="validity"></span>
         </div>
         <div class="col-md-4">
-          <label for="validationCustom02" class="form-label" aria-describedby="prenomHelp">Prenom</label>
+          <label for="validationCustom02" class="h6 form-label" aria-describedby="prenomHelp">Prenom</label>
           <div id="prenomHelp" class="form-text">Nous ne partagerons jamais votre prenom avec qui que ce soit.</div>
           <input type="text" class="form-control" id="validationCustom02" required>
         </div>
         <div class="col-md-4">
-          <label for="validationCustomUsername3" class="form-label" aria-describedby="emailHelp">Email</label>
-          <div id="emailHelp" class="form-text">Veuillez entrer une adresse e-mail valide. Example: example@example.com </div>
+          <label for="validationCustomUsername03" class="h6 form-label" aria-describedby="emailHelp">Email</label>
+          <div id="emailHelp" class="form-text">Veuillez entrer une adresse e-mail valide. </div>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="validationCustomUsername03" aria-describedby="inputGroupPrepend"
-              required>
+            <input type="text" class="form-control" id="validationCustomUsername03" aria-describedby="inputGroupPrepend"  placeholder="example@example.com"
+              required pattern=".+@tutsplus\.com|.+@envato\.com">
           </div>
         </div>
         <div class="col-md-4">
-          <label for="validationCustom05" class="form-label" aria-describedby="adresseHelp">Adresse</label>
-          <div id="adresseHelp" class="form-text">Veuillez entrer une adresse e-mail valide. Example: 123 Rue Paris</div>
-          <input type="text" class="form-control" id="validationCustom05" required>
+          <label for="validationCustom04" class="h6 form-label" aria-describedby="adresseHelp">Adresse</label>
+          <div id="adresseHelp" class="form-text">Veuillez entrer une adresse e-mail valide.</div>
+          <input type="text" class="form-control" id="validationCustom04"  placeholder="123 rue Paris" required>
         </div>
         <div class="col-md-3">
-          <label for="validationCustom06" class="form-label" aria-describedby="villeHelp">Ville</label>
+          <label for="validationCustom0" class="h6 form-label" aria-describedby="villeHelp">Ville</label>
           <div id="villeHelp" class="form-text">Veuillez entrer une ville valide </div>
-          <input type="text" class="form-control" id="validationCustom06" required>
+          <input type="text" class="form-control" id="validationCustom05" required>
         </div>
   
         <div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end">
           <button class="btn btn-primary" type="submit" onclick="registerOrder()">Passer la commande</button>
         </div>
-      </div>
-
+      </form>
+    </div>
     </main>
 
 

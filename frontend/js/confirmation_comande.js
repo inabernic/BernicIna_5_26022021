@@ -2,8 +2,8 @@ async function registerOrder() {
     let contact = {
         lastName: document.querySelector('#validationCustom01').innerText,
         firstName: document.querySelector('#validationCustom02').innerText,
-        address: document.querySelector('#validationCustom06').innerText,
-        city: document.querySelector('#validationCustom06').innerText,
+        address: document.querySelector('#validationCustom04').innerText,
+        city: document.querySelector('#validationCustom05').innerText,
         email: document.querySelector('#validationCustomUsername03').innerText,
     }
 
@@ -24,12 +24,20 @@ async function registerOrder() {
         "Content-Type": "application/json",
     });
 
-    let confirmationOrder = await fetch("http://localhost:3000/api/cameras/order", {
+    let confirmationOrder = await fetch("http://localhost:3000/api/cameras/order",{
         method: "POST",
         headers: myHeaders,
         body: json
-    }).then(response => response.json())
+    }).then(response => response.json());
+
     window.localStorage.clear();
     alert(`Votre numero de commande est:`+ confirmationOrder.orderId)
     document.location.href = `index.html`
+
+
 }
+
+registerOrder()
+.catch(e => {
+  console.log('erreur: ' + e.message);
+});

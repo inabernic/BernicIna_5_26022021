@@ -64,23 +64,31 @@
         </header>
 
         <main class="content">
-            <h1>La description du produit : </p>
-                <div id="produit">
+                <div id="produit" class="shadow-none p-3 mb-5 bg-light rounded">
                     <template id="template_info">
-                        <p scope="col" id="idProduit" style="display:none"></p>
-                        <img scope="col" id="imgProduit" height="" width="300"></img>
-                        <h1 scope="col" id="nameProduit"></h1>
-                        <p scope="col" id="descriptionProduit" class="display-6"></p>
-                        <select id ="lenses" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option value="0" selected>Choix des lentilles</option>
-                        </select>
-                        <h2><span scope="col" id="priceProduit"></span>€</h2>
+                        <div class="content_produit">
+
+                            <div class="img_box">
+                                <img scope="col" id="imgProduit" height="" width="300"></img>
+                            </div>
+
+                            <div class="about">
+                                <p scope="col" id="idProduit" style="display:none"></p>
+                                <p class="h3 text-center">Modèle: <span scope="col" id="nameProduit"></span> </h2>
+                                    <p class="text-xl-start" scope="col" id="descriptionProduit"></p>
+                                    <select id="lenses" class="form-select form-select-sm"
+                                        aria-label=".form-select-sm example">
+                                        <option value="0" selected>Choix des lentilles</option>
+                                    </select>
+                                    <p class="h5 text-danger text-end"><span scope="col" id="priceProduit"></span> €</p>
+                            </div>
+                        </div>
                     </template>
                 </div>
 
                 <div class="ajout_panier h4">
-                    <label for="q">Quantité: </label>
-                    <select id="qt" name="q" class="h4">
+                    <label class="h6" for="q">Quantité: </label>
+                    <select class="h6 border-primary bg-#6610f2" id="qt" name="q" >
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -88,7 +96,6 @@
                     <button type="button" class="add-to-cart btn btn-primary h4">Ajouter au panier</button>
                 </div>
         </main>
-
 
         <footer>
             <div class="info">
