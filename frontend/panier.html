@@ -96,21 +96,21 @@
       <div class="formulaire shadow-none p-3 mb-5 bg-light rounded">
         <p class="h5 text-primary text-start">Veuillez completez le formulaire avec l'adresse pour receptionne de votre commande :</p>
 
-      <form class="row g-3" action="confirmation_comande.html" novalidate>
+      <form class="row g-3" onsubmit="registerOrder()">
         <div class="col-md-4">
           <label for="validationCustom01" class="h6 form-label" aria-describedby="nomHelp">Nom</label>
-          <div id="nomHelp" class="form-text">Les noms doivent être en minuscules et contenir 4 à 9 caractères.</div>
-          <input type="text" class="form-control" id="validationCustom01" required="required" pattern="[A-Za-z]{4}" title="4 à 10 lettres">
+          <div id="nomHelp" class="form-text">Les noms doivent contenir 4 à 20 caractères.</div>
+          <input type="text" maxlength="20" class="form-control" id="validationCustom01" required pattern="[A-Za-z]{4}" title="4 à 20 lettres">
           <span class="validity"></span>
         </div>
         <div class="col-md-4">
           <label for="validationCustom02" class="h6 form-label" aria-describedby="prenomHelp">Prenom</label>
-          <div id="prenomHelp" class="form-text">Nous ne partagerons jamais votre prenom avec qui que ce soit.</div>
-          <input type="text" class="form-control" id="validationCustom02" required>
+          <div id="prenomHelp" class="form-text">Les prenoms doivent contenir 2 à 20 caractères.</div>
+          <input type="text"  maxlength="20" class="form-control" id="validationCustom02" required pattern="[A-Za-z]{2}" title="2 à 20 lettres">
         </div>
         <div class="col-md-4">
           <label for="validationCustomUsername03" class="h6 form-label" aria-describedby="emailHelp">Email</label>
-          <div id="emailHelp" class="form-text">Veuillez entrer une adresse e-mail valide. </div>
+          <div id="emailHelp" maxlength="20"class="form-text">Veuillez entrer une adresse e-mail valide. </div>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
             <input type="text" class="form-control" id="validationCustomUsername03" aria-describedby="inputGroupPrepend"  placeholder="example@example.com"
@@ -120,16 +120,16 @@
         <div class="col-md-4">
           <label for="validationCustom04" class="h6 form-label" aria-describedby="adresseHelp">Adresse</label>
           <div id="adresseHelp" class="form-text">Veuillez entrer une adresse e-mail valide.</div>
-          <input type="text" class="form-control" id="validationCustom04"  placeholder="123 rue Paris" required>
+          <input type="text" maxlength="20" class="form-control" id="validationCustom04"  placeholder="123 rue Paris" required>
         </div>
         <div class="col-md-3">
           <label for="validationCustom0" class="h6 form-label" aria-describedby="villeHelp">Ville</label>
-          <div id="villeHelp" class="form-text">Veuillez entrer une ville valide </div>
-          <input type="text" class="form-control" id="validationCustom05" required>
+          <div id="villeHelp" class="form-text">Veuillez entrer une ville valide. </div>
+          <input type="text" maxlength="20" class="form-control" id="validationCustom05" required>
         </div>
   
         <div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-primary" type="submit" onclick="registerOrder()">Passer la commande</button>
+          <button class="btn btn-primary" type="submit">Passer la commande</button>
         </div>
       </form>
     </div>
