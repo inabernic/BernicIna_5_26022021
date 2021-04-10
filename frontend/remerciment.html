@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORINOCO | Produits</title>
+    <title>ORINOCO | Caméras Vintages</title>
     <meta name="title" content="ORINOCO | Caméras Vintages">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimal-ui">
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="64x64" href="images/icon.png">
-    <!--  <link rel="icon" sizes="16x16 32x32 64x64"
-        href="https://www.lydianeautourdumonde.com/app/themes/baserock/assets/ico/favicon.ico"> -->
     <meta name="msapplication-TileColor" content="#3bafda">
     <meta name="description"
         content="Lydiane autour du monde c’est des informations pratiques de voyage, des photos, une boutique en ligne, une émission de télévision, des livres et bien plus!">
@@ -32,10 +30,7 @@
     </script>
     <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
-    <script src='./js/produit.js' defer></script>
-
-</head>
-
+    <script src='./js/remerciment.js' defer></script>
 
 <body>
     <div class="wrapper">
@@ -46,53 +41,15 @@
                     <img src="images/Capture.png" alt="logo Orinoco">
                 </a>
             </div>
-
-            <div class="find">
-                <a href="panier.html"> <i class="fas fa-shopping-basket"></i>Mon panier</a>
-            </div>
         </header>
 
-
-
-        <div class="dropdown">
-            <ul id="cart-dropdown" hidden>
-                <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
-                <li class="go-to-cart hidden"><a href="panier.html">Voir le panier</a></li>
-            </ul>
-        </div>
-
-        </header>
-
-        <main class="content">
-            <div id="produit" class="shadow-none p-3 mb-5 bg-light rounded">
-                <template id="template_info">
-                    <div class="content_produit">
-
-                        <div class="img_box">
-                            <img scope="col" id="imgProduit" height="" width="300"></img>
-                        </div>
-
-                        <div class="about">
-                            <p scope="col" id="idProduit" style="display:none"></p>
-                            <p class="h3 text-center">Modèle: <span scope="col" id="nameProduit"></span> </p>
-                            <p class="text-xl-start" scope="col" id="descriptionProduit"></p>
-                            <select id="lenses" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                <option value="0" selected>Choix des lentilles</option>
-                            </select>
-                            <p class="h5 text-dark text-end"><span scope="col" id="priceProduit"></span> €</p>
-                        </div>
-                    </div>
-                </template>
-            </div>
-
-            <div class="ajout_panier h4">
-                <label class="h6" for="q">Quantité: </label>
-                <select class="h6 border-primary bg-#6610f2" id="qt" name="q">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-                <button type="button" class="add-to-cart btn btn-primary h4">Ajouter au panier</button>
+        <main>
+            <div class="shadow-none p-3 bg-light rounded">
+                <p class="h5">Votre numéro de commande : <span scope="col" id="orderId" class="h4 text-primary"></span>
+                </p>
+                <p class="h5 mb-5">Avec un total de : <span scope="col" id="totalMerci" class="h4 text-primary"></span>
+                </p>
+                <p class="mt-5 h1 text-center text-dark">Merci pour votre visite, à bientôt!</p>
             </div>
         </main>
 

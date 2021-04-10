@@ -34,10 +34,6 @@
         import {displayProduits} from './js/displayProduits.js';
         window.onload = displayProduits;
     </script>
-    <!-- <script type="module">
-        import { Toast } from 'bootstrap.esm.min.js' ;
-        Array.from(document.querySelectorAll('.toast')).forEach(toastNode => new Toast(toastNode))
-      </script> -->
 </head>
 
 
@@ -65,16 +61,17 @@
         <main class="content ">
             <div id="app">
                 <template id="template">
-                    <div class="container col-sm-2 shadow-lg p-3 mb-5 bg-body ">
+                    <div class="container col-xl-2 col-lg-4 col-md-3 shadow-lg p-3 mb-5 bg-body ">
                         <div class="produit_notButton">
-                        <div id="idProduit" style="display:none;"></div>
-                        <img id="imgProduit" src="" class="card-img-top rounded mx-auto d-block img-fluid"></img>
-                        <p class="h6" id="nameProduit"></p>
-                        <p id="priceProduit"></p>
-                    </div>
+                            <div id="idProduit" style="display:none;"></div>
+                            <img id="imgProduit" src="" class="card-img-top rounded mx-auto d-block img-fluid"></img>
+                            <p class="h6" id="nameProduit"></p>
+                            <p id="priceProduit"></p>
+                        </div>
 
                         <div class="card-body">
-                            <input id="bouton_info" type="button" class="btn btn-primary rounded mx-auto d-block" value="Plus d'info">
+                            <input id="bouton_info" type="button" class="btn btn-primary rounded mx-auto d-block"
+                                value="Plus d'info">
                         </div>
                     </div>
                 </template>
