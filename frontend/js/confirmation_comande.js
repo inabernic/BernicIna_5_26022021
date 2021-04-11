@@ -1,7 +1,7 @@
 async function registerOrder() {
   try {
     let contact = {
-      lastName: document.querySelector("#validationCustom0").value,
+      lastName: document.querySelector("#validationCustom01").value,
       firstName: document.querySelector("#validationCustom02").value,
       address: document.querySelector("#validationCustom04").value,
       city: document.querySelector("#validationCustom05").value,
