@@ -1,6 +1,6 @@
 listCart();
 
-async function listCart() {
+function listCart() {
   let products = [];
   const produitHtml = document.querySelector("#listProducts");
   const templateElem = document.getElementById("template_list");
@@ -8,6 +8,10 @@ async function listCart() {
 
   try {
     //on parse la liste de produits "products"
+    if (localStorage.productsKey === undefined) {
+      document.querySelector(".btn").disabled = true;
+      return;
+    }
     products = JSON.parse(localStorage.productsKey);
     let i = 1;
     for (let produit of products) {
@@ -39,7 +43,12 @@ function deleteProductBasket(idProduct) {
   //let products = JSON.parse(localStorage.productsKey);     //acces direct
   let filteredProducts = products.filter((elem) => elem._id !== idProduct);
   console.log(filteredProducts);
-  localStorage.setItem("productsKey", JSON.stringify(filteredProducts));
+  console.log(filteredProducts.length);
+  if (filteredProducts.length === 0) {
+    window.localStorage.clear();
+  } else {
+    localStorage.setItem("productsKey", JSON.stringify(filteredProducts));
+  }
   //localStorage.productsKey =  JSON.stringify(filteredProducts);    //acces direct
   document.location.reload();
 }
