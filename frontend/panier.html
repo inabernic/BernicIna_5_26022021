@@ -55,11 +55,9 @@
     </header>
 
     <main class="content">
-      <div class="panier">
+      <p id="message" style="display: none;">Votre panier est vide !</p>
+      <div id="wrapper_items">
         <p class="h2 text-primary text-start">Voici votre panier : </p>
-      </div>
-
-      <div>
         <table class="table-bordered table table-light table-striped">
           <thead>
             <tr>
@@ -128,7 +126,8 @@
             <label for="validationCustom04" class="h6 form-label" aria-describedby="adresseHelp">Adresse</label>
             <div id="adresseHelp" class="form-text">Veuillez entrer une adresse valide.</div>
             <input type="text" maxlength="20" class="form-control" id="validationCustom04" placeholder="123 rue Paris"
-              required pattern="[0-9]{1,}[A-Za-z0-9áàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{7,}" title="7 à 20 caractères">
+              required pattern="[0-9]{1,}[A-Za-z0-9áàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{7,}"
+              title="7 à 20 caractères">
           </div>
           <div class="col-md-3">
             <label for="validationCustom0" class="h6 form-label" aria-describedby="villeHelp">Ville</label>

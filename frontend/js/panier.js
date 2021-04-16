@@ -10,6 +10,8 @@ function listCart() {
     //on parse la liste de produits "products"
     if (localStorage.productsKey === undefined) {
       document.querySelector(".formulaire").style.display = "none";
+      document.querySelector("#wrapper_items").style.display = "none";
+      document.querySelector("#message").style.display = "block";
       return;
     }
     products = JSON.parse(localStorage.productsKey);
