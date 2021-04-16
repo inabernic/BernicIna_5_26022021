@@ -9,7 +9,7 @@ function listCart() {
   try {
     //on parse la liste de produits "products"
     if (localStorage.productsKey === undefined) {
-      document.querySelector(".commande").visibility = true;
+      document.querySelector(".formulaire").style.display = "none";
       return;
     }
     products = JSON.parse(localStorage.productsKey);
