@@ -1,4 +1,4 @@
-detailProduit();
+"use strict";
 
 async function detailProduit() {
   let idProduit = getURLParameter("id");
@@ -51,7 +51,7 @@ function addProductToBasket(product) {
     products = JSON.parse(localStorage.productsKey);
   }
   //si le produit avec le meme id existe dans le panier, alors on augmente la quantité
-  let filteredProducts = products.filter((elem) => elem._id === product._id); 
+  let filteredProducts = products.filter((elem) => elem._id === product._id);
   if (filteredProducts.length > 0) {
     let q = document.querySelector("#qt").value;
     let qfinal = parseInt(filteredProducts[0].quantite) + parseInt(q);
@@ -63,3 +63,5 @@ function addProductToBasket(product) {
   localStorage.setItem("productsKey", JSON.stringify(products));
   alert(`Article ${product.name} bien ajouté au panier`);
 }
+
+detailProduit();

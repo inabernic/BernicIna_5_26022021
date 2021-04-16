@@ -1,4 +1,4 @@
-listCart();
+"use strict";
 
 function listCart() {
   let products = [];
@@ -9,7 +9,7 @@ function listCart() {
   try {
     //on parse la liste de produits "products"
     if (localStorage.productsKey === undefined) {
-      document.querySelector(".btn").disabled = true;
+      document.querySelector(".commande").visibility = true;
       return;
     }
     products = JSON.parse(localStorage.productsKey);
@@ -52,3 +52,5 @@ function deleteProductBasket(idProduct) {
   //localStorage.productsKey =  JSON.stringify(filteredProducts);    //acces direct
   document.location.reload();
 }
+
+listCart();

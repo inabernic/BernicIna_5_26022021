@@ -105,14 +105,14 @@
             <label for="validationCustom01" class="h6 form-label" aria-describedby="nomHelp">Nom</label>
             <div id="nomHelp" class="form-text">Les noms doivent contenir 4 à 20 caractères.</div>
             <input type="text" maxlength="20" class="form-control" id="validationCustom01" required
-              pattern="[A-Za-z]{4,}" title="4 à 20 lettres">
+              pattern="[A-Za-záàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{4,}" title="4 à 20 lettres">
             <span class="validity"></span>
           </div>
           <div class="col-md-4">
             <label for="validationCustom02" class="h6 form-label" aria-describedby="prenomHelp">Prénom</label>
             <div id="prenomHelp" class="form-text">Les prénoms doivent contenir 2 à 20 caractères.</div>
             <input type="text" maxlength="20" class="form-control" id="validationCustom02" required
-              pattern="[A-Za-z]{2,}" title="2 à 20 lettres">
+              pattern="[A-Za-záàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{2,}" title="2 à 20 lettres">
           </div>
           <div class="col-md-4">
             <label for="validationCustomUsername03" class="h6 form-label" aria-describedby="emailHelp">Email</label>
@@ -128,13 +128,13 @@
             <label for="validationCustom04" class="h6 form-label" aria-describedby="adresseHelp">Adresse</label>
             <div id="adresseHelp" class="form-text">Veuillez entrer une adresse valide.</div>
             <input type="text" maxlength="20" class="form-control" id="validationCustom04" placeholder="123 rue Paris"
-              required pattern="[A-Za-z0-9\s]{7,}" title="7 à 20 caractères">
+              required pattern="[0-9]{1,}[A-Za-z0-9áàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{7,}" title="7 à 20 caractères">
           </div>
           <div class="col-md-3">
             <label for="validationCustom0" class="h6 form-label" aria-describedby="villeHelp">Ville</label>
             <div id="villeHelp" class="form-text">Veuillez entrer une ville valide. </div>
             <input type="text" maxlength="20" class="form-control" id="validationCustom05" required
-              pattern="[A-Za-z0-9\s]{3,}" title="3 à 20 caractères">
+              pattern="[A-Za-z0-9áàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{3,}" title="3 à 20 caractères">
           </div>
 
           <div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end">

@@ -1,4 +1,4 @@
-merci();
+"use strict";
 
 function getURLParameter(sParam) {
   let params = new URLSearchParams(document.location.search.substring(1));
@@ -11,3 +11,5 @@ function merci() {
   document.getElementById("orderId").innerText = orderId;
   document.getElementById("totalMerci").innerText = total;
 }
+
+merci();
