@@ -34,7 +34,7 @@ function listCart() {
     //afficher le  total
     document.querySelector("#total").innerText = total + ` Euros`;
   } catch (error) {
-    console.error(error.message);
+    console.error(error);
   }
 }
 
@@ -54,4 +54,14 @@ function deleteProductBasket(idProduct) {
   document.location.reload();
 }
 
+function saveContactLS(){
+  let contact = {
+    lastName: document.querySelector("#nom").value,
+    firstName: document.querySelector("#prenom").value,
+    address: document.querySelector("#addresse").value,
+    city: document.querySelector("#ville").value,
+    email: document.querySelector("#email").value,
+  };
+  localStorage.setItem("contactKey", JSON.stringify(contact));
+}
 listCart();

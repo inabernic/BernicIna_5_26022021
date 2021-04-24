@@ -33,7 +33,6 @@
   <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
   <script src='./js/panier.js' defer></script>
-  <script src='./js/confirmation_comande.js' defer></script>
 
 
 </head>
@@ -98,7 +97,7 @@
         <p class="h5 text-primary text-start">Veuillez compléter le formulaire avec l'adresse pour réceptionner votre
           commande :</p>
 
-        <form id='commande' class="row g-3" action="" onsubmit="registerOrder();return false">
+        <form id='commande' class="row g-3" action="confirmation.html" onsubmit="saveContactLS()">
           <div class="col-md-4">
             <label for="nom" class="h6 form-label" aria-describedby="nomHelp">Nom</label>
             <div id="nomHelp" class="form-text">Les noms doivent contenir 4 à 20 caractères.</div>

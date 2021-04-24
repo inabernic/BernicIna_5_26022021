@@ -30,7 +30,7 @@
     </script>
     <script src="https://kit.fontawesome.com/43b52705fd.js" crossorigin="anonymous"></script>
 
-    <script src='./js/remerciment.js' defer></script>
+    <script src='./js/confirmation.js' defer></script>
 
 <body>
     <div class="wrapper">
@@ -44,10 +44,13 @@
         </header>
 
         <main>
-            <div class="shadow-none p-3 bg-light rounded">
+            <p id ="message"class="h5">Commande un cours ... </p>
+            <div id="merci" style="display: none" class="shadow-none p-3 bg-light rounded">
                 <p class="h5">Votre numéro de commande : <span scope="col" id="orderId" class="h4 text-primary"></span>
                 </p>
-                <p class="h5 mb-5">Avec un montant total de : <span scope="col" id="totalMerci" class="h4 text-primary"></span>
+                <p class="h5 mb-5">Avec un montant total de : <span scope="col" id="totalMerci"
+                        class="h4 text-primary"></span>
+                    <span class="h4 text-primary"> €</span>
                 </p>
                 <p class="mt-5 h1 text-center text-dark">Merci pour votre visite, à bientôt!</p>
             </div>
