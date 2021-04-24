@@ -29,7 +29,6 @@ function listCart() {
         deleteProductBasket(produit._id);
       };
       produitHtml.appendChild(clone);
-
       total += produit.quantite * produit.price;
     }
     //afficher le  total

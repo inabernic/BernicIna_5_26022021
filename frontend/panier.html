@@ -100,39 +100,39 @@
 
         <form id='commande' class="row g-3" action="" onsubmit="registerOrder();return false">
           <div class="col-md-4">
-            <label for="validationCustom01" class="h6 form-label" aria-describedby="nomHelp">Nom</label>
+            <label for="nom" class="h6 form-label" aria-describedby="nomHelp">Nom</label>
             <div id="nomHelp" class="form-text">Les noms doivent contenir 4 à 20 caractères.</div>
-            <input type="text" maxlength="20" class="form-control" id="validationCustom01" required
+            <input type="text" maxlength="20" class="form-control" id="nom" required
               pattern="[A-Za-záàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{4,}" title="4 à 20 lettres">
             <span class="validity"></span>
           </div>
           <div class="col-md-4">
-            <label for="validationCustom02" class="h6 form-label" aria-describedby="prenomHelp">Prénom</label>
+            <label for="prenom" class="h6 form-label" aria-describedby="prenomHelp">Prénom</label>
             <div id="prenomHelp" class="form-text">Les prénoms doivent contenir 2 à 20 caractères.</div>
-            <input type="text" maxlength="20" class="form-control" id="validationCustom02" required
+            <input type="text" maxlength="20" class="form-control" id="prenom" required
               pattern="[A-Za-záàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{2,}" title="2 à 20 lettres">
           </div>
           <div class="col-md-4">
-            <label for="validationCustomUsername03" class="h6 form-label" aria-describedby="emailHelp">Email</label>
+            <label for="email" class="h6 form-label" aria-describedby="emailHelp">Email</label>
             <div id="emailHelp" class="form-text">Veuillez entrer une adresse e-mail valide. </div>
             <div class="input-group has-validation">
               <span class="input-group-text" id="inputGroupPrepend">@</span>
-              <input type="text" maxlength="20" class="form-control" id="validationCustomUsername03"
+              <input type="text" maxlength="20" class="form-control" id="email"
                 aria-describedby="inputGroupPrepend" placeholder="example@example.com" required
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}">
             </div>
           </div>
           <div class="col-md-4">
-            <label for="validationCustom04" class="h6 form-label" aria-describedby="adresseHelp">Adresse</label>
+            <label for="addresse" class="h6 form-label" aria-describedby="adresseHelp">Adresse</label>
             <div id="adresseHelp" class="form-text">Veuillez entrer une adresse valide.</div>
-            <input type="text" maxlength="20" class="form-control" id="validationCustom04" placeholder="123 rue Paris"
+            <input type="text" maxlength="20" class="form-control" id="addresse" placeholder="123 rue Paris"
               required pattern="[0-9]{1,}[A-Za-z0-9áàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{7,}"
               title="7 à 20 caractères">
           </div>
           <div class="col-md-3">
-            <label for="validationCustom0" class="h6 form-label" aria-describedby="villeHelp">Ville</label>
+            <label for="ville" class="h6 form-label" aria-describedby="villeHelp">Ville</label>
             <div id="villeHelp" class="form-text">Veuillez entrer une ville valide. </div>
-            <input type="text" maxlength="20" class="form-control" id="validationCustom05" required
+            <input type="text" maxlength="20" class="form-control" id="ville" required
               pattern="[A-Za-z0-9áàâäãéèêëíìîïóòôöõúùûüýÿÁÀÂÄÃÉÈÊËÍÌÎÏÓÒÔÖÕÚÙÛÜÝ\s]{3,}" title="3 à 20 caractères">
           </div>
 

@@ -1,11 +1,11 @@
 async function registerOrder() {
   try {
     let contact = {
-      lastName: document.querySelector("#validationCustom01").value,
-      firstName: document.querySelector("#validationCustom02").value,
-      address: document.querySelector("#validationCustom04").value,
-      city: document.querySelector("#validationCustom05").value,
-      email: document.querySelector("#validationCustomUsername03").value,
+      lastName: document.querySelector("#nom").value,
+      firstName: document.querySelector("#prenom").value,
+      address: document.querySelector("#addresse").value,
+      city: document.querySelector("#ville").value,
+      email: document.querySelector("#email").value,
     };
 
     let productIds = [];
@@ -19,7 +19,6 @@ async function registerOrder() {
       contact: contact,
       products: productIds,
     };
-
     let json = JSON.stringify(body);
     console.log(json);
     myHeaders = new Headers({
@@ -38,9 +37,9 @@ async function registerOrder() {
         return response.json();
       })
       .then((order) => confirmationCommande(order.orderId))
-      .catch((error) => alert(error));
+      .catch((error) => console.log(error));
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 }
 
