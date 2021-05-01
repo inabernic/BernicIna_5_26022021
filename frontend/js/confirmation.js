@@ -40,6 +40,7 @@ async function registerOrder() {
 }
 
 function messageError(err) {
+  // au moment de validation commande, en cas que le serveur ne repond pas
   document.getElementById("message").innerText = err;
 }
 
